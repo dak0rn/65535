@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "n.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "f.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "6.css"}}" />
+
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    
+    {{! Blog's header image }}
+    {{! Only displayed if you have set a header image in the settings }}
+    {{#if @blog.cover}}
+    <header id="global-header" style="background-image: url({{@blog.cover}});">
+    </header>
+    {{/if}}
+    
+    {{! Main content }}
+    <div id="wrapper">
+        <div class="medium-3 columns" id="block-header">
+            {{! Header on the left }}
+            <header>
+                {{#if @blog.logo}}
+                    <a href="{{@blog.url}}"><img id="logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                {{/if}}
+                <h1><a href="{{@blog.url}}" class="brand">{{@blog.title}}</a></h1>
+                {{> "sidenav"}}
+            </header>
+        </div>
+        {{! Main content goes here }}
+        {{{body}}}
+    </div>
+    <div class="clear"></div>
+    {{! Here comes the footer }}
+    {{> "footer"}}
+
+    {{ghost_foot}}
+</body>
+</html>

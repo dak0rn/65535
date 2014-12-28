@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{#post}}
+
+<div class="medium-9 columns" id="block-main">
+    <section class="post">
+        {{#if image}}
+            <div class="post-image" style="background-image: url({{image}})"></div>
+        {{/if}}
+        <div class="title meta">
+            <h1><a href="{{url}}">{{title}}</a></h1>
+        </div>
+        <article class="flow-text">{{content}}</article>
+    </section>
+    <div class="post-meta">
+        <div class="medium-2 columns">{{author}}</div>
+        <div class="medium-2 columns"><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time></div>
+        <div class="medium-4 columns">{{tags}}</div>
+        <div class="medium-4 columns"><a href="{{url absolute=true}}">{{url absolute=true}}</a></div>
+    </div>
+</div>
+{{/post}}

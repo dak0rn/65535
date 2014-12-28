@@ -1,0 +1,11 @@
+{{!< default }}
+
+<div class="medium-9 columns grid" id="block-main">
+    {{! Header }}
+    <h1>Author: <em>{{author.name}}</em></h1>
+    
+    
+    {{! Contents }}
+    {{>"loop-grid"}}
+    {{pagination}}
+</div>

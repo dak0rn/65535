@@ -1,0 +1,16 @@
+{{! Custom pagination here }}
+
+<div class="clear"></div>
+<section class="pagination">
+   <div class="small-6 columns">
+   {{#if prev}}
+        <a href="{{page_url prev}}" class="btn">&larr;</a>
+    {{/if}}
+   </div>
+   <div class="small-6 columns right">
+   {{#if next}}
+        <a href="{{page_url next}}" class="btn">&rarr;</a>
+    {{/if}}
+   </div>
+   <div class="clear"></div>
+</section>

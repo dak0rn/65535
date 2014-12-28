@@ -1,0 +1,13 @@
+<ul class="large-block-grid-4">
+    {{#foreach posts}}
+        <li>
+            <div class="post-box">
+                <div class="title meta">
+                    <h1><a href="{{url}}">{{title}}</a></h1>
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time>
+                    <p>{{excerpt words=26}}</p>
+                </div>
+            </div>
+        </li>
+    {{/foreach}}
+</ul>
